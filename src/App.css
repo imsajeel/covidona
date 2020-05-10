@@ -1,3 +1,11 @@
+body {
+  height: 100%;
+  margin: 0;
+  background-color: blueviolet;
+  font: normal 14px/1.618em "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
 .App {
   text-align: center;
 }
@@ -14,14 +22,41 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: white;
+  padding: 10px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-footer {
+  position: absolute;
+  bottom: 0px;
+  background-color: white;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.icons > a {
+  margin: 5px;
+}
+
+.icons > a > img {
+  transition: all 0.5s;
+}
+
+.icons > a > img:hover {
+  transform: rotate(30deg);
 }
 
 .App-link {
