@@ -1,5 +1,6 @@
 import React from "react";
 import "./Cards.css";
+import Card from "./Card";
 import CountUp from "react-countup";
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
@@ -12,40 +13,25 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   }
   return (
     <div className="cards">
-      <div className="card cases hoverable">
-        <b>Total Cases</b>
-        <h1>
-          <CountUp
-            start={0}
-            end={confirmed.value}
-            duration={2.5}
-            separator=","
-          />
-        </h1>
-        <b>{new Date(lastUpdate).toDateString()}</b>
-        <p>Number of confirmed cases of COVID-19.</p>
+      return (
+      <div className="cards">
+        <Card
+          value={confirmed.value}
+          cardname="confirmed"
+          date={new Date(lastUpdate).toDateString()}
+        />
+        <Card
+          value={recovered.value}
+          cardname="recovered"
+          date={new Date(lastUpdate).toDateString()}
+        />
+        <Card
+          value={deaths.value}
+          cardname="deaths"
+          date={new Date(lastUpdate).toDateString()}
+        />
       </div>
-      <div className="card recovers hoverable">
-        <b>Recoverds</b>
-        <h1>
-          <CountUp
-            start={0}
-            end={recovered.value}
-            duration={2.5}
-            separator=","
-          />
-        </h1>
-        <b>{new Date(lastUpdate).toDateString()}</b>
-        <p>Number of recoveries from COVID-19.</p>
-      </div>
-      <div className="card deaths hoverable">
-        <b>Deaths</b>
-        <h1>
-          <CountUp start={0} end={deaths.value} duration={2.5} separator="," />
-        </h1>
-        <b>{new Date(lastUpdate).toDateString()}</b>
-        <p>Number of deaths caused by COVID-19.</p>
-      </div>
+      );
     </div>
   );
 };

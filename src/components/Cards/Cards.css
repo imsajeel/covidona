@@ -36,11 +36,11 @@
   font-weight: 600;
 }
 
-.cases {
+.confirmed {
   border-bottom: 10px solid #802696;
   max-width: 200px;
 }
-.recovers {
+.recovered {
   border-bottom: 10px solid #27b376;
   max-width: 200px;
 }
