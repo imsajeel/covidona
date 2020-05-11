@@ -1,8 +1,8 @@
 import React from "react";
 import "./Cards.css";
+import CountUp from "react-countup";
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
-  console.log(lastUpdate);
   if (!confirmed) {
     return "Loading";
   }
@@ -12,7 +12,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         <b>Total Cases</b>
         <h1>{confirmed.value}</h1>
         <b>Wed Apr 01, 2020</b>
-        <p>Number of active cases of COVID-19.</p>
+        <p>Number of confirmed cases of COVID-19.</p>
       </div>
       <div className="card recovers hoverable">
         <b>Recoverds</b>
