@@ -24,8 +24,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} alt="Logo" style={{ height: "100px" }} />
         </header>
-        {console.log("this is app.js ", this.state.data)}
-        <Cards />
+        <Cards data={this.state.data} />
         <br />
         <h1 style={{ color: "white" }}>
           More functionalities will added soon.
