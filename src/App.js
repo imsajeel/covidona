@@ -34,6 +34,9 @@ class App extends Component {
             <br />
             <br />
             <div className="card countryData">
+              <CountryPicker />
+            </div>
+            <div className="card countryData">
               <CountryData />
             </div>
             <Chart />

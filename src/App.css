@@ -162,3 +162,36 @@ body {
   border: 5px solid royalblue;
   max-width: 100px;
 }
+
+.countrySelect {
+  width: 100%;
+  border: 0px;
+  color: gray;
+  font-size: 14px;
+  padding: 5px;
+  border-bottom: 1px solid gray;
+}
+
+.btPrimary {
+  padding: 8px 10px;
+  background-color: royalblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple:hover {
+  background: rgb(77, 121, 253)
+    radial-gradient(circle, transparent 1%, rgb(77, 121, 253) 1%) center/15000%;
+}
+
+.ripple:active {
+  background-color: rgb(54, 99, 236);
+  background-size: 100%;
+  transition: background 0s;
+}

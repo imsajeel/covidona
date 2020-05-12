@@ -1,14 +1,29 @@
 import React, { useState, useEffect } from "react";
+import { fetchCountries } from "../../api";
 
 export default function CountryPicker() {
+  const [fetchedCountries, setFetchedCountries] = useState([]);
+
+  useEffect(() => {
+    const fetchAPI = async () => {
+      setFetchedCountries(await fetchCountries());
+    };
+
+    fetchAPI();
+  }, [setFetchedCountries]);
+
+  console.log(fetchedCountries);
+
   return (
     <div>
-      <select id="cars">
-        <option value="Global">Global</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-      </select>
+      <div className="card">
+        <select className="countrySelect" name="counties" id="countries">
+          <option value="default">Pakistan (default)</option>
+          {fetchedCountries.map((country) => (
+            <option value={country}>{country}</option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 }
