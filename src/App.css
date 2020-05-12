@@ -33,6 +33,23 @@ body {
   color: white;
 }
 
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/***
+*   My CSS
+**/
+
 .App-footer {
   background-color: white;
   text-align: center;
@@ -40,7 +57,7 @@ body {
   width: 100%;
 }
 .Layout {
-  border: 2px solid brown;
+  text-align: left;
   margin: auto;
   max-width: 800px;
   padding: 20px;
@@ -63,22 +80,6 @@ body {
   transform: rotate(30deg);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/***
-*   My CSS
-**/
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -100,6 +101,7 @@ body {
 }
 
 .card > h2,
+.card > h3,
 .card > h1 {
   color: black;
   margin-top: 15px;
@@ -136,4 +138,31 @@ body {
 
 .dark-alpha {
   background-color: rgba(65, 64, 64, 0.4);
+}
+
+.countryName {
+  color: black;
+  text-align: center;
+  margin: 10px;
+}
+
+.countryConfirmed {
+  border: 5px solid #802696;
+  max-width: 100px;
+}
+
+.countryRecovered {
+  border: 5px solid #27b376;
+  max-width: 100px;
+}
+.countryDeaths {
+  border: 5px solid #bf212f;
+  max-width: 100px;
+}
+.countryTests {
+  border: 5px solid royalblue;
+  max-width: 100px;
+}
+.chart {
+  height: 500px;
 }

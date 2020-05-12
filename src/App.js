@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Cards from "./components/Cards/Cards";
+import Chart from "./components/Chart/Chart";
+import CountryData from "./components/CountryData/CountryData";
 import AppFooter from "./components/AppFooter/AppFooter";
 import logo from "./logo.png";
 import "./App.css";
@@ -26,6 +28,15 @@ class App extends Component {
         </header>
         <div className="Layout">
           <Cards data={this.state.data} />
+          <div className="container dark-alpha">
+            <b>More Details</b>
+            <br />
+            <br />
+            <div className="card countryData">
+              <CountryData />
+            </div>
+            <Chart />
+          </div>
         </div>
         <footer className="App-footer">
           <AppFooter />
