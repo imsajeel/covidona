@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "./Card";
-import CountUp from "react-countup";
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {

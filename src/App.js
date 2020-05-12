@@ -7,6 +7,7 @@ import logo from "./logo.png";
 import "./App.css";
 
 import { fetchData } from "./api";
+import CountryPicker from "./components/CountryPicker/CountryPicker";
 
 class App extends Component {
   state = {
@@ -24,7 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} alt="Logo" style={{ height: "100px" }} />
+          <img src={logo} alt="Logo" />
         </header>
         <div className="Layout">
           <Cards data={this.state.data} />

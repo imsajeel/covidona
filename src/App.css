@@ -23,14 +23,13 @@ body {
 
 .App-header {
   background-color: white;
+  width: 100%;
+}
+
+.App-header > img {
   padding: 10px;
-  min-height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 80%;
+  max-width: 300px;
 }
 
 .App-link {
@@ -162,7 +161,4 @@ body {
 .countryTests {
   border: 5px solid royalblue;
   max-width: 100px;
-}
-.chart {
-  height: 500px;
 }
