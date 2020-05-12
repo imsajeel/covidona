@@ -1,7 +1,7 @@
 body {
   height: 100%;
   margin: 0;
-  background-color: blueviolet;
+  background-color: royalblue;
   font: normal 14px/1.618em "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -34,14 +34,18 @@ body {
 }
 
 .App-footer {
-  position: absolute;
-  bottom: 0px;
   background-color: white;
   text-align: center;
   overflow: hidden;
   width: 100%;
 }
-
+.Layout {
+  border: 2px solid brown;
+  margin: auto;
+  max-width: 800px;
+  padding: 20px;
+  min-height: 100vh;
+}
 .icons {
   display: flex;
   flex-wrap: wrap;
@@ -70,4 +74,66 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+/***
+*   My CSS
+**/
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  transition: all 0.3s;
+  color: gray;
+}
+
+.hoverable:hover {
+  transform: scale(1.05);
+  box-shadow: 0.5px 0.5px 20px rgb(89, 24, 149);
+}
+
+.card > h2,
+.card > h1 {
+  color: black;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.card > p {
+  margin-top: 5px;
+  color: black;
+  font-weight: 600;
+}
+
+.confirmed {
+  border-bottom: 10px solid #802696;
+  width: 200px;
+}
+.recovered {
+  border-bottom: 10px solid #27b376;
+  width: 200px;
+}
+.deaths {
+  border-bottom: 10px solid #bf212f;
+  width: 200px;
+}
+
+.container {
+  width: 100%;
+  max-width: 680px;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+
+.dark-alpha {
+  background-color: rgba(65, 64, 64, 0.4);
 }

@@ -24,11 +24,9 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} alt="Logo" style={{ height: "100px" }} />
         </header>
-        <Cards data={this.state.data} />
-        <br />
-        <h1 style={{ color: "white" }}>
-          More functionalities will added soon.
-        </h1>
+        <div className="Layout">
+          <Cards data={this.state.data} />
+        </div>
         <footer className="App-footer">
           <AppFooter />
         </footer>

@@ -1,5 +1,4 @@
 import React from "react";
-import "./Cards.css";
 import Card from "./Card";
 import CountUp from "react-countup";
 
@@ -13,7 +12,6 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   }
   return (
     <div className="cards">
-      return (
       <div className="cards">
         <Card
           value={confirmed.value}
@@ -31,7 +29,6 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           date={new Date(lastUpdate).toDateString()}
         />
       </div>
-      );
     </div>
   );
 };
