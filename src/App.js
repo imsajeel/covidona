@@ -6,18 +6,30 @@ import AppFooter from "./components/AppFooter/AppFooter";
 import logo from "./logo.png";
 import "./App.css";
 
-import { fetchData } from "./api";
+import { fetchData, fetchCountryData } from "./api";
 import CountryPicker from "./components/CountryPicker/CountryPicker";
 
 class App extends Component {
   state = {
     data: {},
+    country: "",
+    countryData: {},
   };
 
   async componentDidMount() {
     const fetchedData = await fetchData();
     this.setState({ data: fetchedData });
   }
+
+  handleCountryChange = async (country) => {
+    // fetch data
+    const fetchedCountryData = await fetchCountryData(country);
+    // set state
+    this.setState({
+      country: country,
+      countryData: fetchedCountryData,
+    });
+  };
 
   render() {
     // const { data } = this.state;
@@ -34,11 +46,13 @@ class App extends Component {
             <br />
             <br />
             <div className="card countryData">
-              <CountryPicker />
+              <CountryPicker handleCountryChange={this.handleCountryChange} />
             </div>
-            <div className="card countryData">
-              <CountryData />
-            </div>
+
+            <CountryData
+              country={this.state.country}
+              countryData={this.state.countryData}
+            />
             <Chart />
           </div>
         </div>

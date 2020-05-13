@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchCountries } from "../../api";
 
-export default function CountryPicker() {
+export default function CountryPicker({ handleCountryChange }) {
   const [fetchedCountries, setFetchedCountries] = useState([]);
 
   useEffect(() => {
@@ -12,15 +12,22 @@ export default function CountryPicker() {
     fetchAPI();
   }, [setFetchedCountries]);
 
-  console.log(fetchedCountries);
-
   return (
     <div>
       <div className="card">
-        <select className="countrySelect" name="counties" id="countries">
-          <option value="default">Pakistan (default)</option>
-          {fetchedCountries.map((country) => (
-            <option value={country}>{country}</option>
+        <select
+          className="countrySelect"
+          name="counties"
+          id="countries"
+          onChange={(event) => {
+            handleCountryChange(event.target.value);
+          }}
+        >
+          <option value="">Please select a country</option>
+          {fetchedCountries.map((country, i) => (
+            <option key={i} value={country}>
+              {country}
+            </option>
           ))}
         </select>
       </div>

@@ -140,27 +140,34 @@ body {
 }
 
 .countryName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: black;
   text-align: center;
   margin: 10px;
 }
 
+.countryName > * {
+  margin: 5px;
+}
+
 .countryConfirmed {
-  border: 5px solid #802696;
-  max-width: 100px;
+  border-top: 15px solid #802696;
+  width: 130px;
 }
 
 .countryRecovered {
-  border: 5px solid #27b376;
-  max-width: 100px;
+  border-top: 15px solid #27b376;
+  width: 130px;
 }
 .countryDeaths {
-  border: 5px solid #bf212f;
-  max-width: 100px;
+  border-top: 15px solid #bf212f;
+  width: 130px;
 }
 .countryTests {
-  border: 5px solid royalblue;
-  max-width: 100px;
+  border-top: 15px solid royalblue;
+  width: 130px;
 }
 
 .countrySelect {
@@ -170,6 +177,10 @@ body {
   font-size: 14px;
   padding: 5px;
   border-bottom: 1px solid gray;
+}
+
+.countrySelect:focus {
+  outline: none;
 }
 
 .btPrimary {
