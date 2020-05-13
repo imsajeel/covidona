@@ -9,7 +9,6 @@ export default function CountryData({
   if (!country) {
     return <div></div>;
   } else {
-    console.log(countryFlag);
     return (
       <div className="card countryData">
         <div className="countryName">
