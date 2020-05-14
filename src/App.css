@@ -59,7 +59,6 @@ body {
   text-align: left;
   margin: auto;
   max-width: 800px;
-  padding: 20px;
   min-height: 100vh;
 }
 .icons {
@@ -96,7 +95,7 @@ body {
 
 .hoverable:hover {
   transform: scale(1.05);
-  box-shadow: 0.5px 0.5px 20px rgb(89, 24, 149);
+  box-shadow: 0.5px 0.5px 20px rgb(21, 52, 143);
 }
 
 .card > h2,
@@ -127,7 +126,6 @@ body {
 }
 
 .container {
-  width: 100%;
   max-width: 680px;
   margin: 10px auto;
   border-radius: 5px;
